@@ -1,0 +1,63 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 20rem;
+  width: 100%;
+  justify-content: end;
+}
+
+.text {
+  padding: 3rem;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.buttons {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  justify-self: end;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 20%;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: lightcoral;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  animation: fade-in;
+  animation-duration: 1s;
+  top: 0px;
+  left: 50px;
+  height: 500px;
+  width: 50%;
+  background-color: lightgrey;
+}
+
+@keyframes fade-in {
+  0% {
+    top: -500px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+#modal button {
+  position: absolute;
+  right: 0;
+}
+
+h1 {
+  padding: 20px;
+}
